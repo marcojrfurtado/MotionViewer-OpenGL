@@ -1,0 +1,7 @@
+
+The camera placement is performed according to the motion data, so the initial pose may not be displayed in the center. The camera is centered at the mean vertex of all the root position points along the motion. It is also translated according to the variation of the (x,y,z) coordinates during the motion:
+		camera.translate( (maxX + minX)/2 , (maxY + minY)/2, maxZ + OFFSET ).
+The parameters used to create the perspective projection ( i.e. x_left, x_right, near, far, etc. ) do not change, independently of the BVH file being played. This did not impact on a problem for playing the BVH files  given to us as samples. However, I cannot guarantee that any other animation will fit in the projection.
+
+
+Other addition of this program is the option 'f' and 'F', used to turn on/off the FPS information. This was used for debugging during the implementation, but I did not see a reason to remove it.
